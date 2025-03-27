@@ -31,9 +31,11 @@
       const ctx = canvas.getContext('2d');
       
       // 이미지 파일들
+// 수정된 코드 (0001 ~ 0100)
 const images = [];
-for (let i = 50001; i <= 50100; i++) {
-  images.push(`https://raw.githubusercontent.com/builddweller/bvs1_image/main/bvs1b/${i}.jpg`);
+for (let i = 1; i <= 100; i++) {
+  const imageName = String(i).padStart(4, '0'); // 숫자를 4자리로 변환 (0001, 0002, ... 0100)
+  images.push(`https://raw.githubusercontent.com/builddweller/bvs2/main/bvs2_image/bvs2d/${imageName}.jpg`);
 }
 
       let currentIndex = Math.floor(images.length / 2); // 중간 이미지부터 시작
